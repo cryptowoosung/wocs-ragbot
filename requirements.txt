@@ -1,0 +1,18 @@
+# Core RAG
+raganything
+lightrag-hku
+
+# PDF parsing
+mineru
+pymupdf
+pillow
+
+# LLM
+openai
+
+# UI
+streamlit
+
+# Utilities
+python-dotenv
+pydantic

@@ -1,0 +1,47 @@
+# 민감 파일 (절대 커밋 금지)
+.env
+.env.local
+*.key
+*.pem
+
+# 원본 데이터 (카탈로그/FITI/브로슈어 등 PDF)
+source_docs/
+
+# RAG 인덱싱 결과 (대용량, 재생성 가능)
+rag_storage/
+
+# 가상환경
+venv/
+.venv/
+
+# Python 캐시
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+
+# 로그
+logs/
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+Thumbs.db
+.DS_Store
+
+# MinerU 모델 캐시 (Step 2 이후 생성됨)
+models/
+.cache/
+
+# 특허 관련 (방어 장치 - 어떤 경로에 있어도 차단)
+*특허*
+*patent*
+*출원*
+*10-2026-*
