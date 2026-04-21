@@ -5,7 +5,9 @@
 *.pem
 
 # 원본 데이터 (카탈로그/FITI/브로슈어 등 PDF)
-source_docs/
+source_docs/*
+!source_docs/MANIFEST.md
+!source_docs/DEDUPE_LOG.md
 
 # RAG 인덱싱 결과 (대용량, 재생성 가능)
 rag_storage/
@@ -23,7 +25,7 @@ __pycache__/
 .mypy_cache/
 
 # 로그
-logs/
+logs/*.log
 *.log
 
 # IDE
@@ -31,6 +33,10 @@ logs/
 .idea/
 *.swp
 *.swo
+
+# 로컬 세션/설정 상태
+.bkit/
+.claude/
 
 # OS
 Thumbs.db
