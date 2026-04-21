@@ -24,8 +24,9 @@ __pycache__/
 .pytest_cache/
 .mypy_cache/
 
-# 로그
-logs/*.log
+# 로그 — logs/ 폴더 안쪽 전체 차단 (.gitkeep만 허용해서 빈 폴더 유지)
+logs/*
+!logs/.gitkeep
 *.log
 
 # IDE
@@ -42,9 +43,10 @@ logs/*.log
 Thumbs.db
 .DS_Store
 
-# 테스트 입출력
+# 테스트/파싱 입출력
 test_input/
 test_output/
+output/
 
 # MinerU 모델 캐시 (Step 2 이후 생성됨)
 models/
