@@ -42,6 +42,10 @@ logs/*.log
 Thumbs.db
 .DS_Store
 
+# 테스트 입출력
+test_input/
+test_output/
+
 # MinerU 모델 캐시 (Step 2 이후 생성됨)
 models/
 .cache/
