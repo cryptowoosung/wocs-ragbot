@@ -4,7 +4,7 @@
 - **중복 제거**: 2026-04-21 15:30 (FITI 내수도-1.PDF 삭제, 상세는 `DEDUPE_LOG.md`)
 - **총 파일**: 27개 (초기 28개 → 1개 중복 제거)
 - **총 용량**: 약 39 MB
-- **원본 기준**: `C:\Users\user\OneDrive\Desktop\wocs-website-production\`
+- **원본 기준**: (로컬 전용, 저장소 외)
 
 ## 폴더 요약
 
@@ -20,19 +20,23 @@
 
 ## catalog/ (1개)
 
-| 파일명 (복사본) | 크기 | 원본 파일명 | 원본 경로 |
-|---|---|---|---|
-| catalog_v10_8.pdf | 17,175,556 B (16.38 MB) | WOCS_Catalog_v10_8.pdf | `C:\Users\user\OneDrive\Desktop\wocs-website-production\카달로그외브로슈어\WOCS_Catalog_v10_8.pdf` |
+| 파일명 (복사본) | 크기 | 원본 파일명 |
+|---|---|---|
+| catalog_v10_8.pdf | 17,175,556 B (16.38 MB) | WOCS_Catalog_v10_8.pdf |
+
+> 원본 위치: (로컬 전용)
 
 ## brochure/ (1개)
 
-| 파일명 | 크기 | 원본 경로 |
-|---|---|---|
-| wocs_brochure_v3.pdf | 6,417,430 B (6.12 MB) | `C:\Users\user\OneDrive\Desktop\wocs-website-production\카달로그외브로슈어\wocs_brochure_v3.pdf` |
+| 파일명 | 크기 |
+|---|---|
+| wocs_brochure_v3.pdf | 6,417,430 B (6.12 MB) |
+
+> 원본 위치: (로컬 전용)
 
 ## product_brochure/ (16개)
 
-> 원본 폴더: `C:\Users\user\OneDrive\Desktop\wocs-website-production\카달로그외브로슈어\WOCS_Brochures_Final_64\`
+> 원본 위치: (로컬 전용 — 카탈로그·브로셔 아카이브 내 `WOCS_Brochures_Final_64` 묶음)
 > 필터: `*_KO_Print.pdf` (KO + Print 모두 포함, Dark/EN 제외)
 
 | 파일명 | 크기 (bytes) |
@@ -56,7 +60,7 @@
 
 ## fiti/ (9개, 중복 1개 삭제 후)
 
-> 원본 폴더: `C:\Users\user\OneDrive\Desktop\wocs-website-production\성적서\`
+> 원본 위치: (로컬 전용 — FITI 시험성적서 보관 폴더)
 > 중복 삭제 기록: `DEDUPE_LOG.md`
 
 | 파일명 | 크기 (bytes) | 소재 분류 |
@@ -75,12 +79,13 @@
 
 ## 보안 검증 (2026-04-21)
 
-- ✅ 특허 문서 (`특허`, `patent`, `출원`, `10-2026`) 포함 파일 없음
-- ✅ 견적/증빙 (`가족관계`, `중소기업`, `견적`, `quote`, `estimate`) 포함 파일 없음
-- ✅ 웹사이트 배포 복사본 (`assets/`, `dist/`) 경로에서 복사된 것 없음 — 원본만
+- ✅ 출원 중 문서 (명세/증명서 등) 포함 파일 없음
+- ✅ 견적/증빙 지원서류 (가족관계·중소기업확인서 등) 포함 파일 없음
+- ✅ 웹사이트 배포 복사본(`assets/`, `dist/`) 경로에서 복사된 것 없음 — 원본만
+- ✅ 이 매니페스트 내 절대 경로·이메일·전화번호·바이어명·가격 정보 **없음** (2026-04-21 redact 완료)
 
 ## 알려진 이슈 / 메모
 
 1. ~~**내수도 중복 추정**~~ → **해결 (2026-04-21)**: SHA256 해시 `15bbe21f...` 완전 일치 확인. `내수도-1.PDF` 삭제, `내수도.PDF` 유지. 상세 로그는 `DEDUPE_LOG.md` 참고.
 2. **FITI 실제 10종**: 사용자가 처음 제시한 "FITI 5종"과 불일치. 전체 10종 인덱싱할지, 5종으로 축소할지 이후 단계에서 결정 필요.
-3. **원본 비이동**: 모든 원본 파일은 `OneDrive\Desktop\wocs-website-production\` 에 그대로 유지됨 (복사만 수행).
+3. **원본 비이동**: 모든 원본 파일은 로컬의 별도 보관 폴더(저장소 외)에 그대로 유지됨 (복사만 수행).
