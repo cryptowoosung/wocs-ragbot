@@ -32,6 +32,9 @@ logs/*
 # Redaction 백업 (개인 정보/절대 경로 포함 가능 — 의도 명문화)
 logs/redaction_backup/
 
+# 모니터링 히스토리 (트래픽 스냅샷 누적 — 로컬 비교용)
+logs/monitor_history.json
+
 # IDE
 .vscode/
 .idea/

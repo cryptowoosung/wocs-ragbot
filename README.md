@@ -78,6 +78,42 @@ wocs-ragbot/
 └── README.md
 ```
 
+## 📈 운영 모니터링
+
+GitHub public repo의 views / clones / popular paths / referrers를 CLI로 조회하여 이상 급증을 감지한다. LinkedIn 포스팅 직후 등 공개 구간에서 주기적으로 실행을 권장한다.
+
+### 실행
+
+PowerShell:
+```powershell
+powershell.exe -ExecutionPolicy Bypass -File scripts\monitor.ps1
+```
+
+Git Bash (jq 필요 — `winget install jqlang.jq` 로 설치):
+```bash
+bash scripts/monitor.sh
+```
+
+### 출력 예시
+```
+== WOCS RAG Bot GitHub 트래픽 모니터 ==
+Repo      : cryptowoosung/wocs-ragbot
+임계치    : 일 100회 이상 → HIGH  |  전일 대비 x5.0 이상 → SPIKE
+----------------------------------------------------------------
+-- views --
+  총계 :      0    고유 :      0
+  날짜            count  uniques   플래그
+  2026-04-20          0        0
+  2026-04-21          0        0
+
+-- 인기 경로 (paths) --
+  (데이터 없음 — 아직 방문이 적습니다)
+----------------------------------------------------------------
+완료 : 2026-04-21 20:00  |  히스토리 엔트리 1개 -> logs/monitor_history.json
+```
+
+실행 결과는 `logs/monitor_history.json` 에 누적 저장되며(gitignore 대상), 다음 실행 시 전일·전회 대비 변화를 바탕으로 HIGH / SPIKE 플래그를 색으로 표시한다.
+
 ## ⚠️ 주의사항 (필독)
 
 - **외부 유출 금지**: `source_docs/` 안에는 FITI 시험성적서·영업 수치 등 영업 기밀이 포함된다. `.gitignore`로 차단되어 있으나 별도 매체로 반출 금지.
